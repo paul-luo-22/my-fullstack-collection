@@ -1,12 +1,18 @@
 import React from 'react'
 
+import { Route, Routes } from 'react-router-dom'
+
+import Menu from './Menu'
+
 function App() {
   return (
     <>
       <header className="header">
-        <h1>My Collection</h1>
+        <h1>Cafe Interface</h1>
       </header>
-      <section className="main">{/* add your code here */}</section>
+      <Routes>
+        <Route path="/" element={<Menu />} />
+      </Routes>
     </>
   )
 }
