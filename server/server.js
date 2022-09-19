@@ -8,9 +8,6 @@ const productsRoutes = require('./routes/productsRoutes.js')
 server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
-server.use('/api/v1/users', productsRoutes)
-// server.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'public', 'index.html'))
-// })
+server.use('/api/v1/products', productsRoutes)
 
 module.exports = server
