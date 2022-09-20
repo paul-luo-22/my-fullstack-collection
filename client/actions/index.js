@@ -19,6 +19,7 @@ export function fetchProducts() {
 }
 
 export function createProduct(product, stock, price) {
+  console.log(product, stock, price)
   return {
     type: ADD_PRODUCT,
     payload: {
@@ -31,8 +32,8 @@ export function createProduct(product, stock, price) {
 
 export function addNewProduct(product, stock, price) {
   return (dispatch) => {
-    return addProduct(product, stock, price).then((res) => {
-      dispatch(createProduct(res))
+    return addProduct(product, stock, price).then(() => {
+      dispatch(createProduct(product, stock, price))
     })
   }
 }

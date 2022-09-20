@@ -9,7 +9,7 @@ function Menu() {
 
   useEffect(() => {
     dispatch(fetchProducts())
-  }, [products])
+  }, [])
 
   // function deleteItem(e) {
   //   console.log(e)
