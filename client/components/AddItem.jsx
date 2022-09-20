@@ -20,10 +20,10 @@ export default function AddItem() {
     })
   }
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault()
     dispatch(addNewProduct(form.product, form.stock, form.price))
-    await dispatch(fetchProducts())
+    dispatch(fetchProducts())
   }
 
   return (
