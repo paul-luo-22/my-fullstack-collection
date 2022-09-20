@@ -4,7 +4,6 @@ export const SET_PRODUCTS = 'SET_PRODUCTS'
 export const ADD_PRODUCT = 'ADD_PRODUCT'
 
 export function setProducts(products) {
-  console.log('Set: ', products)
   return {
     type: SET_PRODUCTS,
     payload: products,
@@ -14,7 +13,6 @@ export function setProducts(products) {
 export function fetchProducts() {
   return (dispatch) => {
     return getProducts().then((products) => {
-      console.log('Fetch: ', products)
       dispatch(setProducts(products))
     })
   }

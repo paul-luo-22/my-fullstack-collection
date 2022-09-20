@@ -13,7 +13,6 @@ export function addProduct(product, stock, price) {
     .post(rootUrl + `/products`)
     .send({ product, stock, price })
     .then((res) => {
-      console.log('API: ', res.body)
       return res.body
     })
 }

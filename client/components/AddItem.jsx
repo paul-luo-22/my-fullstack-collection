@@ -23,7 +23,6 @@ export default function AddItem() {
   function handleSubmit(e) {
     e.preventDefault()
     dispatch(addNewProduct(form.product, form.stock, form.price))
-    dispatch(fetchProducts())
   }
 
   return (
