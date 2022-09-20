@@ -15,4 +15,19 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+  const product = {
+    ...req.body,
+    restockPrice: Math.trunc(req.body.price / 2),
+  }
+  db.addProduct(product)
+    .then(() => {
+      res.sendStatus(201)
+    })
+    .catch((err) => {
+      console.log(err)
+      res.status(500).json({ message: 'Something went wrong' })
+    })
+})
+
 module.exports = router

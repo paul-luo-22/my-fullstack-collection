@@ -1,8 +1,8 @@
 import React from 'react'
 
-import { Route, Routes } from 'react-router-dom'
-
 import Menu from './Menu'
+
+import AddItem from './AddItem'
 
 function App() {
   return (
@@ -10,9 +10,8 @@ function App() {
       <header className="header">
         <h1>Cafe Interface</h1>
       </header>
-      <Routes>
-        <Route path="/" element={<Menu />} />
-      </Routes>
+      <Menu />
+      <AddItem />
     </>
   )
 }

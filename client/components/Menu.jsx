@@ -11,9 +11,9 @@ function Menu() {
     dispatch(fetchProducts())
   }, [])
 
-  function deleteItem(e) {
-    console.log(e)
-  }
+  // function deleteItem(e) {
+  //   console.log(e)
+  // }
 
   return (
     <div>
@@ -23,12 +23,11 @@ function Menu() {
           <div key={id}>
             <li className="products" key={product + id}>
               Item: {product} Stock: {stock} Price: {price}
-              <button onClick={deleteItem}>Delete</button>
+              {/* <button onClick={deleteItem}>Delete</button> */}
             </li>
           </div>
         ))}
       </ul>
-      <button type="submit">Submit</button>
     </div>
   )
 }
